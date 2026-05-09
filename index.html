@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlanEats - Menu della Settimana</title>
+    <link rel="stylesheet" href="stule.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="app-header">
+        <h1>PlanEats</h1>
+        <p class="subtitle">
+          Pianifica i pasti, raccogli gli ingredienti e spunta la spesa mentre
+          sei al supermercato.
+        </p>
+      </header>
+
+      <nav class="top-nav" aria-label="Navigazione principale">
+        <button type="button" class="nav-pill active" data-view="menu">
+          <span aria-hidden="true">📅</span> Menu
+        </button>
+        <button type="button" class="nav-pill" data-view="spesa">Spesa</button>
+        <button type="button" class="nav-pill" data-view="ricette">Ricettario</button>
+      </nav>
+
+      <section
+        id="day-selector"
+        class="day-selector"
+        aria-label="Giorni settimana"
+      ></section>
+
+      <section id="views-viewport" class="views-viewport">
+        <div id="views-track" class="views-track">
+          <section class="view-panel">
+            <div id="meal-cards" class="meal-cards"></div>
+            <button
+              id="clear-week-button"
+              type="button"
+              class="add-btn clear-week-button"
+            >
+              Cancella tutta la settimana
+            </button>
+          </section>
+          <section class="view-panel">
+            <div id="spesa-view" class="single-view-card"></div>
+          </section>
+          <section class="view-panel">
+            <div id="ricette-view" class="single-view-card"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
